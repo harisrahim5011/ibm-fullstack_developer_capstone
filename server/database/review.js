@@ -1,8 +1,10 @@
-let mongoose = require('mongoose');
+"use strict";
 
-let Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
-let reviews = new Schema({
+const Schema = mongoose.Schema;
+
+const reviews = new Schema({
 	id: {
     type: Number,
     required: true,
