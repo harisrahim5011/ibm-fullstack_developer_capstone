@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
-const reviews = new Schema({
+let reviews = new Schema({
 	id: {
     type: Number,
     required: true,
