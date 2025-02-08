@@ -1,4 +1,3 @@
-from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import logout, login, authenticate
 from django.http import JsonResponse
@@ -52,7 +51,8 @@ def get_cars(request):
     if count == 0:
         initiate()
     car_models = CarModel.objects.select_related('car_make')
-    cars = [{"CarModel": car_model.name, "CarMake": car_model.car_make.name} for car_model in car_models]
+    cars = [{"CarModel": car_model.name, "CarMake": car_model.car_make.name}
+            for car_model in car_models]
     return JsonResponse({"CarModels": cars})
 
 # Update the `get_dealerships` render list of dealerships, all by default, 
